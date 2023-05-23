@@ -3,7 +3,6 @@ import json
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-import time
 import image
 import ransac
 import diagram
@@ -13,17 +12,12 @@ import utils
 annotationsDirectory = '../dlc-2021/cg/clips/annotations'
 directory = '../dlc-2021/cg/clips/images'
 
-# width = 150.0
-width = 300.0
-# height = 100.0
-height = 215.0
+width = 400.0
+height = 315.0
 
-# cv2.namedWindow("Original")
+cv2.namedWindow("Original")
 cv2.namedWindow("Image")
 cv2.namedWindow("WithoutPlaneImage")
-
-
-# cv2.namedWindow("Hist")
 
 
 
@@ -60,18 +54,22 @@ for docType in os.listdir(directory):
             print("imgPath", imgPath)
             if (imgKey):
                 meta = metaData[imgKey]
-                linRgbImage = image.getLinearImage(imgPath, meta, width, height)
+
+                linRgbImage = image.getLinearImageWithoutPerspective(imgPath, meta)
                 flatImageData = utils.getFlatData(linRgbImage) / 255
                 eq, idx_inliers, finalPoints = ransac.getPlane(flatImageData)
                 fig = diagram.getPlaneScatters(flatImageData, idx_inliers, finalPoints)
                 projection, imageWithoutPlane, idx_cands = plane.getProjectionOnOrtoPlane(finalPoints, flatImageData, idx_inliers, eq)
                 projectionFig = diagram.getProjectionPlaneScatter(projection, idx_cands)
                 fig.show()
+                fig2 = diagram.getPlaneScatters(imageWithoutPlane, idx_inliers, finalPoints)
+                fig2.show()
                 projectionFig.show()
-                restoredImage = imageWithoutPlane.reshape(int(height), int(width), 3)
-                zeroRatio = len(idx_cands) / (width * height)
+                restoredImage = imageWithoutPlane.reshape(linRgbImage.shape)
+                documentPixels = len(flatImageData[np.all(flatImageData > 0, axis=1)])
+                zeroRatio = len(idx_cands) / documentPixels
                 print("Black ratio", zeroRatio)
-                # cv2.imshow("Original", cv2.imread(imgPath))
+                cv2.imshow("Original", cv2.resize(cv2.imread(imgPath), (0, 0), fx=0.2, fy=0.2))
                 cv2.imshow("Image", linRgbImage)
                 cv2.imshow("WithoutPlaneImage", restoredImage)
                 key = cv2.waitKey()

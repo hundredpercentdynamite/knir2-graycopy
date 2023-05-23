@@ -1,11 +1,17 @@
 import numpy as np
 import utils
 
-def excludeMainPlane(flatData, equation, threshold=0.01):
+def excludeMainPlane(flatData, equation, threshold=0.02):
     a, b, c, d = equation
     # расстояние от каждой точки до плоскости
+    zerosIdx = np.all(flatData == 0, axis=1)
+    peaksIdx = np.all(flatData == 1, axis=1)
+    fakeDist = threshold + 1,
+
     distance = (a * flatData[:, 0] + b * flatData[:, 1] + c * flatData[:, 2] + d
                 ) / np.sqrt(a ** 2 + b ** 2 + c ** 2)
+    distance[zerosIdx == True] = fakeDist
+    distance[peaksIdx == True] = fakeDist
     idx_candidates = np.where(np.abs(distance) <= threshold)[0]
     zeroedFlat = np.copy(flatData)
     zeroedFlat[idx_candidates] = np.array([0, 0, 0])

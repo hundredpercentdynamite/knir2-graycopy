@@ -9,7 +9,7 @@ def getDocumentContour(imageMeta, padding=30):
     for i in range(0, 4):
         x = imageMeta["regions"][0]["shape_attributes"]["all_points_x"][i]
         y = imageMeta["regions"][0]["shape_attributes"]["all_points_y"][i]
-        contour.append([x, y])
+        contour.append((x, y))
     return np.float32(contour)
 
 
@@ -69,8 +69,25 @@ def getLinearImage(imgPath, annotation, width, height):
     transformMatrix = cv2.getPerspectiveTransform(documentContour, standardPerspective)
 
     transformedImage = cv2.warpPerspective(currentImage, transformMatrix, dsize=imgSize)
-    # linRgbImage = convertToLinearRgb(np.float32(transformedImage))
     linRgbImage = gammaCorrection(np.uint8(transformedImage))
+    linRgbImage = cv2.GaussianBlur(linRgbImage, (9, 9), 0)
+    return linRgbImage
+
+
+def getLinearImageWithoutPerspective(imgPath, annotation):
+    currentImage = cv2.imread(imgPath)
+    documentContour = getDocumentContour(annotation)
+
+    cntr = np.array(documentContour, dtype=np.int32)
+    stencil = np.zeros(currentImage.shape).astype(currentImage.dtype)
+    cv2.fillPoly(stencil, [cntr], [255, 255, 255])
+    masked = cv2.bitwise_and(currentImage, stencil)
+
+    x, y, w, h = cv2.boundingRect(documentContour)
+    img = masked[y:y+h, x:x+w]
+
+    linRgbImage = cv2.resize(img, (0, 0), fx=0.4, fy=0.4)
+    linRgbImage = gammaCorrection(np.uint8(linRgbImage))
     linRgbImage = cv2.GaussianBlur(linRgbImage, (9, 9), 0)
     return linRgbImage
 
@@ -85,5 +102,23 @@ def getLinearImageFromContour(imgPath, contour, width, height):
 
     transformedImage = cv2.warpPerspective(currentImage, transformMatrix, dsize=imgSize)
     linRgbImage = gammaCorrection(np.uint8(transformedImage))
+    # linRgbImage = cv2.GaussianBlur(linRgbImage, (9, 9), 0)
+    return linRgbImage / 255
+
+
+def getLinearImageFromContourWithoutWarp(imgPath, contour, width, height):
+    currentImage = cv2.imread(imgPath)
+    resizeCoef = 0.2
+
+    cntr = np.array(contour, dtype=np.int32)
+    stencil = np.zeros(currentImage.shape).astype(currentImage.dtype)
+    cv2.fillConvexPoly(stencil, cntr, [255, 255, 255])
+    masked = cv2.bitwise_and(currentImage, stencil)
+
+    x, y, w, h = cv2.boundingRect(cntr)
+    img = masked[y:y+h, x:x+w]
+
+    linRgbImage = cv2.resize(img, (0, 0), fx=resizeCoef, fy=resizeCoef)
+    linRgbImage = gammaCorrection(np.uint8(linRgbImage))
     linRgbImage = cv2.GaussianBlur(linRgbImage, (9, 9), 0)
     return linRgbImage / 255
