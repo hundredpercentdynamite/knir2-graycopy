@@ -86,7 +86,7 @@ def getLinearImageWithoutPerspective(imgPath, annotation):
     x, y, w, h = cv2.boundingRect(documentContour)
     img = masked[y:y+h, x:x+w]
 
-    linRgbImage = cv2.resize(img, (0, 0), fx=0.4, fy=0.4)
+    linRgbImage = cv2.resize(img, (0, 0), fx=0.3, fy=0.3)
     linRgbImage = gammaCorrection(np.uint8(linRgbImage))
     linRgbImage = cv2.GaussianBlur(linRgbImage, (9, 9), 0)
     return linRgbImage

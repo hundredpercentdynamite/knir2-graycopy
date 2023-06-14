@@ -10,9 +10,9 @@ def getColorDistribution(image):
     plot = figure.add_subplot(projection='3d')
 
     plot.set_title("RGB")
-    plot.set_xlabel('Red')
-    plot.set_ylabel('Green')
-    plot.set_zlabel('Blue')
+    plot.set_xlabel('Красный')
+    plot.set_ylabel('Зелёный')
+    plot.set_zlabel('Синий')
 
     plot.scatter(
         xs=red,
@@ -46,7 +46,7 @@ def getPlaneScatters(flatData, idx_inliers, finalPoints):
     )
 
     fig = go.Figure(data=inliers_marker_data)
-    fig.update_scenes(xaxis_title="Blue", yaxis_title="Green", zaxis_title="Red", xaxis_range=[0, 1], yaxis_range=[0, 1], zaxis_range=[0, 1])
+    fig.update_scenes(xaxis_title="Синий", yaxis_title="Зелёный", zaxis_title="Красный", xaxis_range=[0, 1], yaxis_range=[0, 1], zaxis_range=[0, 1])
     fig.add_scatter3d(
         x=outliers[:, 0],
         y=outliers[:, 1],

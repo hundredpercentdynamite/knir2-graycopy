@@ -13,7 +13,7 @@ from datetime import datetime
 import time
 import os
 
-dfName = 'images.csv'
+dfName = 'banknotes.csv'
 df = pd.read_csv(dfName, sep=';')
 
 width = 300.0
@@ -160,7 +160,8 @@ def calculate():
     blackRatio = 0.8
     planeDelta = 0.015
     ransacIters = 1000
-    yYrue, yScore, yPred, falseNegatives, falsePositives, errors = predict(blackRatio, planeDelta, ransacIters)
+    # yYrue, yScore, yPred, falseNegatives, falsePositives, errors = predict(blackRatio, planeDelta, ransacIters)
+    yYrue, yScore, yPred, falseNegatives, falsePositives, errors = predict()
     confusion, fScore, aucScore, fpr, tpr, thresholds = getScores(yYrue, yScore, yPred, 2)
     getReport(confusion, fScore, aucScore, fpr, tpr, thresholds, falseNegatives, falsePositives, errors, planeDelta,
               blackRatio, reportPath)

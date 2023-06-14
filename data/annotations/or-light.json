@@ -1,0 +1,557 @@
+{
+  "IMG_1390.jpg3669674": {
+    "filename": "IMG_1390.jpg",
+    "size": 3669674,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            592,
+            2631,
+            2641,
+            466
+          ],
+          "all_points_y": [
+            1499,
+            1625,
+            2500,
+            2358
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "IMG_1389.jpg3511738": {
+    "filename": "IMG_1389.jpg",
+    "size": 3511738,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            524,
+            2474,
+            2552,
+            472
+          ],
+          "all_points_y": [
+            1467,
+            1415,
+            2238,
+            2296
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "IMG_1388.jpg3510663": {
+    "filename": "IMG_1388.jpg",
+    "size": 3510663,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            514,
+            2516,
+            2678,
+            529
+          ],
+          "all_points_y": [
+            1740,
+            1551,
+            2395,
+            2615
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "1000-orig-shadow.png12342854": {
+    "filename": "1000-orig-shadow.png",
+    "size": 12342854,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            708,
+            3308,
+            3379,
+            602
+          ],
+          "all_points_y": [
+            889,
+            885,
+            2042,
+            2022
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "1000-orig-punk.png2344297": {
+    "filename": "1000-orig-punk.png",
+    "size": 2344297,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            222,
+            1055,
+            1060,
+            227
+          ],
+          "all_points_y": [
+            297,
+            291,
+            644,
+            656
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "1000-orig-lamp.png12575196": {
+    "filename": "1000-orig-lamp.png",
+    "size": 12575196,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            531,
+            3804,
+            3859,
+            472
+          ],
+          "all_points_y": [
+            822,
+            881,
+            2285,
+            2278
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "1000-orig-full.png14196306": {
+    "filename": "1000-orig-full.png",
+    "size": 14196306,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            625,
+            3340,
+            3493,
+            633
+          ],
+          "all_points_y": [
+            1176,
+            1015,
+            2179,
+            2407
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "500-orig-shadow.png12082082": {
+    "filename": "500-orig-shadow.png",
+    "size": 12082082,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            960,
+            3407,
+            3446,
+            858
+          ],
+          "all_points_y": [
+            932,
+            979,
+            2046,
+            1990
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "500-orig-lamp.png12693844": {
+    "filename": "500-orig-lamp.png",
+    "size": 12693844,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            814,
+            3414,
+            3450,
+            763
+          ],
+          "all_points_y": [
+            952,
+            1003,
+            2132,
+            2105
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "500-orig-green.png12540187": {
+    "filename": "500-orig-green.png",
+    "size": 12540187,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            932,
+            3619,
+            3631,
+            909
+          ],
+          "all_points_y": [
+            814,
+            826,
+            1983,
+            1975
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "500-orig-full.png14286457": {
+    "filename": "500-orig-full.png",
+    "size": 14286457,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            791,
+            3469,
+            3623,
+            728
+          ],
+          "all_points_y": [
+            983,
+            920,
+            2093,
+            2175
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "100-orig-shadow.png11874738": {
+    "filename": "100-orig-shadow.png",
+    "size": 11874738,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            720,
+            3100,
+            3206,
+            649
+          ],
+          "all_points_y": [
+            1058,
+            1015,
+            2042,
+            2081
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "100-orig-lamp.png13205882": {
+    "filename": "100-orig-lamp.png",
+    "size": 13205882,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            779,
+            3584,
+            3580,
+            688
+          ],
+          "all_points_y": [
+            1035,
+            1204,
+            2400,
+            2278
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "100-orig-green.png13413359": {
+    "filename": "100-orig-green.png",
+    "size": 13413359,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            614,
+            3670,
+            3827,
+            771
+          ],
+          "all_points_y": [
+            983,
+            673,
+            1963,
+            2337
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  },
+  "100-orig-full.png13662251": {
+    "filename": "100-orig-full.png",
+    "size": 13662251,
+    "regions": [
+      {
+        "shape_attributes": {
+          "name": "polygon",
+          "all_points_x": [
+            972,
+            3348,
+            3466,
+            920
+          ],
+          "all_points_y": [
+            1011,
+            972,
+            1983,
+            2042
+          ]
+        },
+        "region_attributes": {
+          "name": "not_defined",
+          "type": "unknown",
+          "image_quality": {
+            "good": true,
+            "frontal": true,
+            "good_illumination": true
+          }
+        }
+      }
+    ],
+    "file_attributes": {
+      "caption": "",
+      "public_domain": "no",
+      "image_url": ""
+    }
+  }
+}

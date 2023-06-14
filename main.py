@@ -21,16 +21,15 @@ cv2.namedWindow("WithoutPlaneImage")
 
 
 
-key = ''
+keyboardKey = ''
 
 
 def onPress(event):
-    global key
+    global keyboardKey
     print(event.key)
-    key = event.key
-    if key == " " or key == "q":
+    keyboardKey = event.key
+    if keyboardKey == " " or keyboardKey == "q":
         plt.close('all')
-
 
 for docType in os.listdir(directory):
     docTypePath = os.path.join(directory, docType)
@@ -43,9 +42,9 @@ for docType in os.listdir(directory):
             jsonAnnotation = json.load(f)
         metaData = jsonAnnotation['_via_img_metadata']
         metaKeys = metaData.keys()
-        if key == ord('q'):
+        if keyboardKey == ord('q'):
             print('breaked!')
-            key = ''
+            keyboardKey = ''
             break
 
         for imgName in os.listdir(imgFolderPath):
@@ -72,7 +71,7 @@ for docType in os.listdir(directory):
                 cv2.imshow("Original", cv2.resize(cv2.imread(imgPath), (0, 0), fx=0.2, fy=0.2))
                 cv2.imshow("Image", linRgbImage)
                 cv2.imshow("WithoutPlaneImage", restoredImage)
-                key = cv2.waitKey()
+                keyboardKey = cv2.waitKey()
                 break
 
 # TODO рефакторинг
